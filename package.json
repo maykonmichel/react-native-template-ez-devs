@@ -7,6 +7,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "memoize-one": "^5.0.0",
+    "moment": "^2.23.0",
     "react": "16.6.3",
     "react-native": "0.57.8"
   },
