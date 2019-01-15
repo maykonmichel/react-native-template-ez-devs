@@ -29,7 +29,6 @@ function* loadDucksWatcher() {
       yield call(actions.loadDucksSucceeded);
     } catch (e) {
       const message = `Erro ao carregar duck: ${e.message}`;
-      console.log(message);
 
       yield put(actions.loadDucksFailed(e.code, message));
     }
