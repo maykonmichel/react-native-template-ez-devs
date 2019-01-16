@@ -1,6 +1,6 @@
-# :ghost: React Native Template by Ez Devs
+# :ghost: React Native Template by ez.devs
 
-React Native template to initialize new projects on Ez Devs. \
+React Native template to initialize new projects on ez.devs. \
 Feel free to fork this repository and pull request changes helping us to improve :blush:
 
 ## :wave: Getting Started
