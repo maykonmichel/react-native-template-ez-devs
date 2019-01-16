@@ -1,6 +1,7 @@
-# React Native Template by Ez Devs
+# :ghost: React Native Template by Ez Devs
 
-React Native template to initialize new projects on Ez Devs.
+React Native template to initialize new projects on Ez Devs. \
+Feel free to fork this repository and pull request changes helping us to improve :blush:
 
 ## Getting Started
 
@@ -17,27 +18,15 @@ What things you need to install this template
 
 ### Installing
 
-Get started with React Native Template by Ez Devs by initializing your project: 
+To start with React Native Template by Ez Devs you need just initialize your project with: 
 
 ```
 react-native init myAppName --template ez-devs
 ```
 
-So install npm packages:
-
-```
-npm i
-```
-
-So link the resources:
-
-```
-react-native link
-```
-
 ### Start
 
-To finally start, run in one terminal: 
+To put it to work, run in one terminal: 
 
 ```
 react-native start
@@ -48,6 +37,10 @@ And this in another one:
 ```
 react-native run-android
 ```
+
+## Plugins
+
+
 
 ## Authors
 
