@@ -12,6 +12,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducers from './reducers';
 import sagas from './sagas';
+import api from '../services/api';
 
 const config = {
   key: 'root',
@@ -19,6 +20,7 @@ const config = {
 };
 
 const sagaMiddleware = createSagaMiddleware();
+const context = { api };
 
 export const store = createStore(
   persistReducer(config, reducers),
@@ -27,6 +29,6 @@ export const store = createStore(
   )
 );
 
-sagaMiddleware.run(sagas);
+sagaMiddleware.run(sagas, context);
 
 export const persistor = persistStore(store);

@@ -2,12 +2,12 @@ import { createActions, handleActions } from 'redux-actions';
 import {
   all,
   call,
+  getContext,
   put,
   takeLatest,
 } from 'redux-saga/effects';
 
 import { createCommonActions, handleCommonActions } from './common';
-import api from '../services/api';
 
 export const actions = {
   ...createActions({
@@ -19,6 +19,8 @@ export const actions = {
 
 function* loadDucksWatcher() {
   yield takeLatest(actions.loadDucks().type, function* loadDucks() {
+    const api = yield getContext('api');
+
     try {
       yield put(actions.loadDucksStarted());
 
