@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-ez-devs",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "homepage": "https://github.com/maykonmichel/react-native-template-ez-devs",
   "keywords": [
     "react-native",
@@ -19,6 +19,7 @@
     "react": "16.6.3",
     "react-native": "0.57.8",
     "react-native-gesture-handler": "^1.0.12",
+    "react-native-sentry": "^0.40.3",
     "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^3.0.9",
     "react-redux": "^6.0.0",

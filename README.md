@@ -24,19 +24,23 @@ To start with React Native Template by Ez Devs you need just initialize your pro
 react-native init myAppName --template ez-devs
 ```
 
-### :rocket: Start
+### :rocket: Quick start
 
-To put it to work, run in one terminal: 
-
-```
-react-native start
-```
-
-And this in another one:
+To run your app on Android: 
 
 ```
 react-native run-android
 ```
+
+To run your app on iOS: 
+
+```
+react-native run-ios
+```
+
+### Additional configuration
+
+To configure Sentry go to App.js file and edit the line 11 adding your dns.
 
 ## :electric_plug: Plugins
 
@@ -46,6 +50,7 @@ react-native run-android
   - [Lodash](https://lodash.com/) for common functions.
   - [memoize-one](https://github.com/alexreardon/memoize-one) for caching functions prevent reprocessing.
   - [Moment.js](https://momentjs.com/) for date management.
+  - [Sentry](https://sentry.io/) for error tracking.
   - [Vector Icons](https://github.com/oblador/react-native-vector-icons) for customizable icons.
   - [React Navigation](https://reactnavigation.org/) for navigation between screens.
   - [Redux](https://redux.js.org/) for state management.
