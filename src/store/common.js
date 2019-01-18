@@ -14,16 +14,15 @@ export const createCommonActions = type => ({
       message
     }
   }),
-  [`${type}_FAILED`]: (code = 400, message = `${type}_FAILED`) => ({ status: { code, message } }),
+  [`${type}_FAILED`]: (code = 400, message = `${type}_FAILED`) => ({ status: { code, message } })
 });
 
 export const handleCommonActions = type => ({
-  [combineActions(
-    `${type}_STARTED`,
-    `${type}_SUCCEEDED`,
-    `${type}_FAILED`
-  )]: (state, { payload: { status } }) => ({
+  [combineActions(`${type}_STARTED`, `${type}_SUCCEEDED`, `${type}_FAILED`)]: (
+    state,
+    { payload: { status } }
+  ) => ({
     ...state,
-    status,
-  }),
+    status
+  })
 });

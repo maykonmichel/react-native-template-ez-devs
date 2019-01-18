@@ -1,5 +1,6 @@
 module.exports = {
-  'extends': 'airbnb',
+  'extends': ['airbnb', 'prettier'],
+  'plugins': ['prettier'],
   'parser': 'babel-eslint',
   'env': {
     'jest': true,
@@ -8,7 +9,8 @@ module.exports = {
     'no-use-before-define': 'off',
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
-    'comma-dangle': 'off'
+    'comma-dangle': 'off',
+    'prettier/prettier': ['error']
   },
   'globals': {
     'fetch': false

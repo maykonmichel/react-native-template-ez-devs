@@ -1,12 +1,6 @@
 import { AsyncStorage } from 'react-native';
-import {
-  applyMiddleware,
-  createStore,
-} from 'redux';
-import {
-  persistStore,
-  persistReducer,
-} from 'redux-persist';
+import { applyMiddleware, createStore } from 'redux';
+import { persistReducer, persistStore } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -16,7 +10,7 @@ import api from '../services/api';
 
 const config = {
   key: 'root',
-  storage: AsyncStorage,
+  storage: AsyncStorage
 };
 
 const sagaMiddleware = createSagaMiddleware();
@@ -24,9 +18,7 @@ const context = { api };
 
 export const store = createStore(
   persistReducer(config, reducers),
-  composeWithDevTools(
-    applyMiddleware(sagaMiddleware)
-  )
+  composeWithDevTools(applyMiddleware(sagaMiddleware))
 );
 
 sagaMiddleware.run(sagas, context);

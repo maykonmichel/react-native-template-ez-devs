@@ -1,11 +1,5 @@
 import { createActions, handleActions } from 'redux-actions';
-import {
-  all,
-  call,
-  getContext,
-  put,
-  takeLatest,
-} from 'redux-saga/effects';
+import { all, call, getContext, put, takeLatest } from 'redux-saga/effects';
 
 import { createCommonActions, handleCommonActions } from './common';
 
@@ -13,8 +7,8 @@ export const actions = {
   ...createActions({
     CLEAR_ALL: undefined,
     SET_DUCKS: undefined,
-    ...createCommonActions('LOAD_DUCKS'),
-  }),
+    ...createCommonActions('LOAD_DUCKS')
+  })
 };
 
 function* loadDucksWatcher() {
@@ -38,28 +32,29 @@ function* loadDucksWatcher() {
 }
 
 export function* sagas() {
-  yield all([
-    loadDucksWatcher(),
-  ]);
+  yield all([loadDucksWatcher()]);
 }
 
 const defaultState = {
   status: {
     code: 0,
-    message: '',
+    message: ''
   },
   data: [],
-  selected: undefined,
+  selected: undefined
 };
 
-export default handleActions({
-  CLEAR_ALL: () => defaultState,
-  SET_DUCKS: (state, { payload = [] }) => ({
-    ...state,
-    data: payload
-  }),
-  ...handleCommonActions('LOAD_DUCKS'),
-}, defaultState);
+export default handleActions(
+  {
+    CLEAR_ALL: () => defaultState,
+    SET_DUCKS: (state, { payload = [] }) => ({
+      ...state,
+      data: payload
+    }),
+    ...handleCommonActions('LOAD_DUCKS')
+  },
+  defaultState
+);
 
 export const getStatus = ({ duck }) => duck.status;
 export const getDucks = ({ duck }) => duck.data;

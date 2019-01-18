@@ -60,7 +60,7 @@ To configure Sentry go to App.js file and edit the line 11 adding your dns.
     
 ### Dev Dependencies
 
-  - [ESLint](https://eslint.org/) for linting.
+  - [ESLint](https://eslint.org/) as [Airbnb](https://github.com/airbnb/javascript) rules for linting .
   - [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension) for redux logger into React Native Debugger.
 
 ## :nerd_face: Authors
