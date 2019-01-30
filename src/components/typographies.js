@@ -1,10 +1,12 @@
-const create = (fontSize, fontHeight, fontFamily) => ({
+import { keys } from 'lodash';
+
+const create = (fontSize, lineHeight, fontFamily) => ({
   fontSize,
-  fontHeight,
+  lineHeight,
   fontFamily
 });
 
-export default {
+const typographies = {
   display4: create(112, 128),
   display3: create(56, 64),
   display2: create(45, 52),
@@ -20,3 +22,7 @@ export default {
   caption1: create(12, 16),
   caption2: create(11, 13)
 };
+
+export default typographies;
+
+export const typographiesKeys = keys(typographies);

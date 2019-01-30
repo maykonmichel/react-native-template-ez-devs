@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-  // StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { View } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-// import {} from '../components';
-import { actions, getStatus, getDucks } from '../store/duck';
+import { Text } from '../components';
+import { actions, getDucks, getStatus } from '../store/duck';
 
 class Screen extends React.Component {
   // state = {};
