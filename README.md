@@ -85,4 +85,5 @@ Reference: [React Native Guide](https://facebook.github.io/react-native/docs/upg
 
 ## :nerd_face: Authors
 
-* **Maykon Michel Palma** - *Initial work* - [MaykonMichel](https://github.com/maykonmichel)
+* [**Maykon Michel Palma**](https://github.com/maykonmichel) - *Initial work*
+* [**Gabriel Cardoso**](https://github.com/cardoso010)
