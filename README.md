@@ -42,6 +42,22 @@ react-native run-ios
 
 To configure api go to src/services/api.js file and edit the line 5 changing the url.
 
+### :arrow_up: Updating
+
+To upgrade this template when a new version is released run:
+
+```
+react-native upgrade
+```
+
+This will check your files against the latest template and perform the following:
+
+  - If there is a new file in the template, it is simply created.
+  - If a file in the template is identical to your file, it is skipped.
+  - If a file is different in your project than the template, you will be prompted; you have options to keep your file or overwrite it with the template version.
+
+Reference: [React Native Guide](https://facebook.github.io/react-native/docs/upgrading#2-upgrade-your-project-templates)
+
 ## :electric_plug: Plugins
 
 ### Dependencies
