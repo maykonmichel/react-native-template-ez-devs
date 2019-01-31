@@ -38,9 +38,9 @@ To run your app on iOS:
 react-native run-ios
 ```
 
-### Additional configuration
+### :heavy_plus_sign: Additional configuration
 
-To configure Sentry go to App.js file and edit the line 11 adding your dns.
+To configure api go to src/services/api.js file and edit the line 5 changing the url.
 
 ## :electric_plug: Plugins
 
@@ -50,6 +50,7 @@ To configure Sentry go to App.js file and edit the line 11 adding your dns.
   - [Lodash](https://lodash.com/) for common functions.
   - [memoize-one](https://github.com/alexreardon/memoize-one) for caching functions prevent reprocessing.
   - [Moment.js](https://momentjs.com/) for date management.
+  - [prop-types](https://github.com/facebook/prop-types) for runtime type checking.
   - [Vector Icons](https://github.com/oblador/react-native-vector-icons) for customizable icons.
   - [React Navigation](https://reactnavigation.org/) for navigation between screens.
   - [Redux](https://redux.js.org/) for state management.
