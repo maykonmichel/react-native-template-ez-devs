@@ -40,7 +40,10 @@ react-native run-ios
 
 ### :heavy_plus_sign: Additional configuration
 
-To configure api go to src/services/api.js file and edit the line 5 changing the url.
+  - To configure api go to src/services/api.js file and edit the line 5 changing the url.
+  - To configure firebase:
+    - Android: paste your google-services.json file at android/app folder.
+    - IOS: paste your GoogleService-Info.plist file at ios/reactNativeTemplateEzDevs folder.
 
 ### :arrow_up: Updating
 
@@ -67,6 +70,7 @@ Reference: [React Native Guide](https://facebook.github.io/react-native/docs/upg
   - [memoize-one](https://github.com/alexreardon/memoize-one) for caching functions prevent reprocessing.
   - [Moment.js](https://momentjs.com/) for date management.
   - [prop-types](https://github.com/facebook/prop-types) for runtime type checking.
+  - [React Native Firebase](https://rnfirebase.io/) for firebase [Firebase](https://firebase.google.com/) SDK implementation.
   - [Vector Icons](https://github.com/oblador/react-native-vector-icons) for customizable icons.
   - [React Navigation](https://reactnavigation.org/) for navigation between screens.
   - [Redux](https://redux.js.org/) for state management.
