@@ -1,7 +1,7 @@
 import { keys } from 'lodash';
 
 const colors = {
-  primary: '#007bff',
+  primary: '#141E50',
   secondary: '#6c757d',
   success: '#28a745',
   info: '#17a2b8',
