@@ -23,11 +23,11 @@
     "react-native-gesture-handler": "^1.0.15",
     "react-native-splash-screen": "^3.1.1",
     "react-native-vector-icons": "^6.2.0",
-    "react-navigation": "^3.0.9",
+    "react-navigation": "^3.1.4",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4",
-    "redux-devtools-extension": "^2.13.7",
+    "redux-devtools-extension": "^2.13.8",
     "redux-persist": "^5.10.0",
     "redux-saga": "^0.16.2",
     "reselect": "^4.0.0"
@@ -35,16 +35,16 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
-    "eslint": "^5.12.1",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.6.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.1",
-    "prettier": "^1.16.3",
+    "prettier": "^1.16.4",
     "react-test-renderer": "16.6.3"
   }
 }
