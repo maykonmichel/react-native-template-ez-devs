@@ -41,25 +41,6 @@ react-native run-ios
 ### :heavy_plus_sign: Additional configuration
 
   - To configure api go to src/services/api.js file and edit the line 5 changing the url.
-  - To configure firebase:
-    - Android: paste your google-services.json file at android/app folder.
-    - IOS: paste your GoogleService-Info.plist file at ios/reactNativeTemplateEzDevs folder.
-
-### :arrow_up: Updating
-
-To upgrade this template when a new version is released run:
-
-```
-react-native upgrade
-```
-
-This will check your files against the latest template and perform the following:
-
-  - If there is a new file in the template, it is simply created.
-  - If a file in the template is identical to your file, it is skipped.
-  - If a file is different in your project than the template, you will be prompted; you have options to keep your file or overwrite it with the template version.
-
-Reference: [React Native Guide](https://facebook.github.io/react-native/docs/upgrading#2-upgrade-your-project-templates)
 
 ## :electric_plug: Plugins
 
@@ -70,7 +51,6 @@ Reference: [React Native Guide](https://facebook.github.io/react-native/docs/upg
   - [memoize-one](https://github.com/alexreardon/memoize-one) for caching functions prevent reprocessing.
   - [Moment.js](https://momentjs.com/) for date management.
   - [prop-types](https://github.com/facebook/prop-types) for runtime type checking.
-  - [React Native Firebase](https://rnfirebase.io/) for firebase [Firebase](https://firebase.google.com/) SDK implementation.
   - [Vector Icons](https://github.com/oblador/react-native-vector-icons) for customizable icons.
   - [React Navigation](https://reactnavigation.org/) for navigation between screens.
   - [Redux](https://redux.js.org/) for state management.
@@ -86,4 +66,3 @@ Reference: [React Native Guide](https://facebook.github.io/react-native/docs/upg
 ## :nerd_face: Authors
 
 * [**Maykon Michel Palma**](https://github.com/maykonmichel) - *Initial work*
-* [**Gabriel Cardoso**](https://github.com/cardoso010)

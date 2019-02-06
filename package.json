@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-ez-devs",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "homepage": "https://github.com/maykonmichel/react-native-template-ez-devs",
   "keywords": [
     "react-native",
@@ -8,7 +8,6 @@
     "ez-devs"
   ],
   "license": "MIT",
-  "private": false,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
