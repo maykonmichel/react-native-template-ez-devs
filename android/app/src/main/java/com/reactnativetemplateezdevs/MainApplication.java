@@ -1,4 +1,4 @@
-package com.helloworld;
+package com.reactnativetemplateezdevs;
 
 import android.app.Application;
 
