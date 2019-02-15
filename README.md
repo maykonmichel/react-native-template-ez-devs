@@ -18,45 +18,11 @@ What things you need to install this template
 
 ### :arrow_down: Installing
 
-First of all, you need clone this repository running on terminal: 
+To start with React Native Template by Ez Devs you need just initialize your project with: 
 
 ```
-git clone git@github.com:maykonmichel/react-native-template-ez-devs.git
+react-native init myAppName --template ez-devs
 ```
-
-And init your React Native project running on terminal:
-
-```
-react-native init myApp
-```
-
-Change: 
-  - The name of folder from 'myApp' in camel case to 'my-app' in kebab case
-  - And the project name at my-app/package.json from from 'myApp' in camel case to 'my-app' in kebab case
-  
-Install all plugins running on terminal:
-
-```
-npm i --save axios lodash moment prop-types react-native-gesture-handler react-native-vector-icons react-navigation react-redux redux redux-actions redux-persist redux-saga reselect
-```
-```
-npm i --save-dev babel-eslint eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react prettier react-test-renderer redux-devtools-extension
-```
-And link all resources running on terminal:
-```
-react-native link
-```
-Copy:
-```
-react-native-template-ez-devs
-├ src
-├ .editorconfig
-├ .eslintrc.js
-├ .prettierc
-├ App.js
-└ babel.config.js
-```
-And paste into my-app/
 
 ### :rocket: Quick start
 
