@@ -7,17 +7,15 @@ import Navigator from './src/navigation';
 import { persistor, store } from './src/store';
 import colors from './src/components/colors';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <StatusBar backgroundColor={colors.primary} />
-        <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
-            <Navigator />
-          </PersistGate>
-        </Provider>
-      </View>
-    );
-  }
+export default function App() {
+  return (
+    <View style={{ flex: 1 }}>
+      <StatusBar backgroundColor={colors.primary} />
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Navigator />
+        </PersistGate>
+      </Provider>
+    </View>
+  );
 }

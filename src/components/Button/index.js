@@ -73,10 +73,11 @@ export default function Button({
           disabled && disabledStyle
         ])}
       >
-        {loading ? (
-          <ActivityIndicator animating {...loadingProps} />
-        ) : (
-          <>
+        <Choose>
+          <When condition={loading}>
+            <ActivityIndicator animating {...loadingProps} />
+          </When>
+          <Otherwise>
             {leftComponent}
             <Text
               color="light"
@@ -90,8 +91,8 @@ export default function Button({
               {title}
             </Text>
             {rightComponent}
-          </>
-        )}
+          </Otherwise>
+        </Choose>
       </View>
     </Touchable>
   );
