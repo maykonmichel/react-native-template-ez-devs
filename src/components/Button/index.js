@@ -41,6 +41,8 @@ Button.defaultProps = {
   titleStyle: {}
 };
 
+const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
+
 export default function Button({
   disabled,
   disabledStyle,
@@ -55,8 +57,6 @@ export default function Button({
   titleStyle,
   ...attributes
 }) {
-  const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
-
   return (
     <Touchable
       activeOpacity={light ? 0.4 : 0.8}
