@@ -13,87 +13,90 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import Text from '../Text';
 
-Button.propTypes = {
-  disabled: PropTypes.bool,
-  disabledStyle: ViewPropTypes.style,
-  disabledTitleStyle: PropTypes.shape(Text.propTypes),
-  leftComponent: PropTypes.element,
-  light: PropTypes.bool,
-  loading: PropTypes.bool,
-  loadingProps: PropTypes.shape(ActivityIndicator.propTypes),
-  rightComponent: PropTypes.element,
-  style: ViewPropTypes.style,
-  title: PropTypes.string,
-  titleStyle: PropTypes.shape(Text.propTypes)
-};
-
-Button.defaultProps = {
-  disabled: false,
-  disabledStyle: {},
-  disabledTitleStyle: {},
-  leftComponent: null,
-  light: false,
-  loading: false,
-  loadingProps: {},
-  rightComponent: null,
-  style: {},
-  title: '',
-  titleStyle: {}
-};
-
 const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
-export default function Button({
-  disabled,
-  disabledStyle,
-  disabledTitleStyle,
-  leftComponent,
-  light,
-  loading,
-  loadingProps,
-  rightComponent,
-  style,
-  title,
-  titleStyle,
-  ...attributes
-}) {
-  return (
-    <Touchable
-      activeOpacity={light ? 0.4 : 0.8}
-      disabled={disabled}
-      underlayColor={light ? 'transparent' : undefined}
-      {...attributes}
-    >
-      <View
-        style={StyleSheet.flatten([
-          styles.button,
-          style,
-          light && styles.light,
-          disabled && styles.disabled,
-          disabled && disabledStyle
-        ])}
+export default class Button extends React.PureComponent {
+  static propTypes = {
+    disabled: PropTypes.bool,
+    disabledStyle: ViewPropTypes.style,
+    disabledTitleStyle: PropTypes.shape(Text.propTypes),
+    leftComponent: PropTypes.element,
+    light: PropTypes.bool,
+    loading: PropTypes.bool,
+    loadingProps: PropTypes.shape(ActivityIndicator.propTypes),
+    rightComponent: PropTypes.element,
+    style: ViewPropTypes.style,
+    title: PropTypes.string,
+    titleStyle: PropTypes.shape(Text.propTypes)
+  };
+
+  static defaultProps = {
+    disabled: false,
+    disabledStyle: {},
+    disabledTitleStyle: {},
+    leftComponent: null,
+    light: false,
+    loading: false,
+    loadingProps: {},
+    rightComponent: null,
+    style: {},
+    title: '',
+    titleStyle: {}
+  };
+
+  render() {
+    const {
+      disabled,
+      disabledStyle,
+      disabledTitleStyle,
+      leftComponent,
+      light,
+      loading,
+      loadingProps,
+      rightComponent,
+      style,
+      title,
+      titleStyle,
+      ...attributes
+    } = this.props;
+    return (
+      <Touchable
+        activeOpacity={light ? 0.4 : 0.8}
+        disabled={disabled}
+        underlayColor={light ? 'transparent' : undefined}
+        {...attributes}
       >
-        <Choose>
-          <When condition={loading}>
-            <ActivityIndicator animating {...loadingProps} />
-          </When>
-          <Otherwise>
-            {leftComponent}
-            <Text
-              color="light"
-              style={StyleSheet.flatten([
-                styles.title,
-                titleStyle,
-                disabled && styles.disabledTitle,
-                disabled && disabledTitleStyle
-              ])}
-            >
-              {title}
-            </Text>
-            {rightComponent}
-          </Otherwise>
-        </Choose>
-      </View>
-    </Touchable>
-  );
+        <View
+          style={StyleSheet.flatten([
+            styles.button,
+            style,
+            light && styles.light,
+            disabled && styles.disabled,
+            disabled && disabledStyle
+          ])}
+        >
+          <Choose>
+            <When condition={loading}>
+              <ActivityIndicator animating {...loadingProps} />
+            </When>
+            <Otherwise>
+              {leftComponent}
+              <Text
+                color="light"
+                style={StyleSheet.flatten([
+                  styles.title,
+                  titleStyle,
+                  disabled && styles.disabledTitle,
+                  disabled && disabledTitleStyle
+                ])}
+              >
+                {title}
+              </Text>
+              {rightComponent}
+            </Otherwise>
+          </Choose>
+        </View>
+      </Touchable>
+    );
+  }
 }

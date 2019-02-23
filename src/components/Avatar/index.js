@@ -1,62 +1,112 @@
 import React from 'react';
-import {
-  Image,
-  Platform,
-  StyleSheet,
-  TouchableNativeFeedback,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
+import { keysIn } from 'lodash';
 
 import styles from './styles';
+import Badge from '../Badge';
+import Icon from '../Icon';
+import Image from '../Image';
+import Text from '../Text';
 
-const Touchable = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 const sizes = {
-  small: 34,
-  medium: 50,
-  large: 75,
-  extraLarge: 150
+  small: { value: 34, typography: 'callout' },
+  medium: { value: 50, typography: 'title2' },
+  large: { value: 75, typography: 'display1' },
+  extraLarge: { value: 150, typography: 'display4' }
 };
 
-Avatar.propTypes = {};
+export default class Avatar extends React.PureComponent {
+  static propTypes = {
+    badge: PropTypes.bool,
+    badgeAttributes: PropTypes.shape(Badge.propTypes),
+    badgeIconAttributes: PropTypes.shape(Icon.propTypes),
+    iconAttributes: PropTypes.shape(Icon.propTypes),
+    imageAttributes: PropTypes.shape(Image.propTypes),
+    placeholder: PropTypes.element,
+    rounded: PropTypes.bool,
+    size: PropTypes.oneOf(keysIn(sizes)),
+    style: ViewPropTypes.style,
+    title: PropTypes.string,
+    titleAttributes: PropTypes.shape(Text.propTypes),
+    titleStyle: Text.propTypes.style
+  };
 
-Avatar.defaultProps = {};
+  static defaultProps = {
+    badge: false,
+    badgeAttributes: {},
+    badgeIconAttributes: {},
+    iconAttributes: {},
+    imageAttributes: {},
+    placeholder: undefined,
+    rounded: true,
+    size: 'medium',
+    style: {},
+    title: undefined,
+    titleAttributes: {},
+    titleStyle: {}
+  };
 
-export default function Avatar({ containerAttributes, containerStyle, rounded, size }) {
-  const Container =
-    containerAttributes.onPress || containerAttributes.onLongPress ? Touchable : View;
+  render() {
+    const {
+      badge,
+      badgeAttributes,
+      badgeIconAttributes,
+      iconAttributes,
+      imageAttributes,
+      placeholder: placeholderContent,
+      rounded,
+      size: sizeName,
+      style,
+      title,
+      titleStyle,
+      titleAttributes,
+      ...attributes
+    } = this.props;
 
-  return (
-    <Container
-      style={StyleSheet.flatten([
-        styles.container,
-        { width: sizes[size], height: sizes[size] },
-        rounded && { borderRadius: sizes[size] / 2 },
-        containerStyle
-      ])}
-      {...containerAttributes}
-    >
-      <Image
-        placeholderStyle={StyleSheet.flatten([
-          placeholderStyle,
-          hidePlaceholder && { backgroundColor: 'transparent' },
-        ])}
-        PlaceholderContent={PlaceholderContent}
-        containerStyle={StyleSheet.flatten([
-          styles.overlayContainer,
-          overlayContainerStyle,
-          rounded && { borderRadius: width / 2, overflow: 'hidden' },
-        ])}
-        source={source}
-        {...imageProps}
+    const size = sizes[sizeName];
+    const Container = attributes.onPress || attributes.onLongPress ? TouchableOpacity : View;
+    const placeholder = placeholderContent || (
+      <Choose>
+        <When condition={!!title}>
+          <Text
+            style={StyleSheet.flatten([styles.title, titleStyle])}
+            typography={size.typography}
+            {...titleAttributes}
+          >
+            {title}
+          </Text>
+        </When>
+        <Otherwise>
+          <Icon name="user" size={size.value * 0.9} color="white" {...iconAttributes} />
+        </Otherwise>
+      </Choose>
+    );
+
+    return (
+      <Container
         style={StyleSheet.flatten([
-          styles.avatar,
-          imageProps && imageProps.style,
-          avatarStyle,
+          styles.container,
+          { width: size.value, height: size.value },
+          rounded && { borderRadius: size.value / 2 },
+          style
         ])}
-        ImageComponent={ImageComponent}
-      />
-    </Container>
-  );
+        {...attributes}
+      >
+        <Image
+          style={StyleSheet.flatten([
+            styles.avatar,
+            rounded && { borderRadius: size.value / 2, overflow: 'hidden' }
+          ])}
+          placeholder={placeholder}
+          {...imageAttributes}
+        />
+        <If condition={badge}>
+          <Badge size={sizeName} style={styles.badge} {...badgeAttributes}>
+            <Icon name="pencil" color="white" size={size.value / 5} {...badgeIconAttributes} />
+          </Badge>
+        </If>
+      </Container>
+    );
+  }
 }

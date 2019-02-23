@@ -7,7 +7,8 @@ const create = (fontSize, lineHeight, fontFamily) => ({
 });
 
 const typographies = {
-  display4: create(112, 128),
+  display5: create(112, 128),
+  display4: create(80, 100),
   display3: create(56, 64),
   display2: create(45, 52),
   display1: create(34, 40),

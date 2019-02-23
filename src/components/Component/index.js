@@ -1,26 +1,27 @@
 import React from 'react';
-import { Image, StyleSheet, View, ViewPropTypes } from 'react-native';
+import { StyleSheet, View, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
 import Text from '../Text';
 
-Component.propTypes = {
-  containerAttributes: PropTypes.shape(ViewPropTypes),
-  containerStyle: ViewPropTypes.style
-};
+export default class Component extends React.PureComponent {
+  static propTypes = {
+    containerAttributes: PropTypes.shape(ViewPropTypes),
+    containerStyle: ViewPropTypes.style
+  };
 
-Component.defaultProps = {
-  containerAttributes: {},
-  containerStyle: {}
-};
+  static defaultProps = {
+    containerAttributes: {},
+    containerStyle: {}
+  };
 
-export default function Component({
-  containerAttributes,
-  containerStyle
-}) {
-  return (
-    <View style={StyleSheet.flatten([styles.container, containerStyle])} {...containerAttributes}>
-    </View>
-  );
+  render() {
+    const { containerAttributes, containerStyle } = this.props;
+    return (
+      <View style={StyleSheet.flatten([styles.container, containerStyle])} {...containerAttributes}>
+        <Text>Component</Text>
+      </View>
+    );
+  }
 }

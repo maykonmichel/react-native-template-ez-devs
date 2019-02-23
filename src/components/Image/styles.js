@@ -8,7 +8,9 @@ export default StyleSheet.create({
     position: 'relative'
   },
   placeholderContainer: {
-    ...StyleSheet.absoluteFillObject
+    ...StyleSheet.absoluteFill,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   placeholder: {
     backgroundColor: colors.light,
