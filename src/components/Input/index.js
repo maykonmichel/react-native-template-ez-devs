@@ -3,22 +3,42 @@ import { Animated, Easing, StyleSheet, TextInput, View, ViewPropTypes } from 're
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import colors from '../colors';
+import colors from '../../configs/colors';
 import Text from '../Text';
 import Icon from '../Icon';
-import typographies from '../typographies';
+import typographies from '../../configs/typographies';
 
 export default class Input extends React.PureComponent {
   static propTypes = {
+    animatedAttributes: PropTypes.shape(Animated.propTypes),
+    animatedStyle: Animated.View.propTypes.style,
     containerAttributes: PropTypes.shape(ViewPropTypes),
     containerStyle: ViewPropTypes.style,
-    label: PropTypes.string
+    error: PropTypes.string,
+    errorAttributes: PropTypes.shape(Text.propTypes),
+    errorStyle: Text.propTypes.style,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+    iconAttributes: PropTypes.shape(Icon.propTypes),
+    iconContainerStyle: ViewPropTypes.style,
+    label: PropTypes.string,
+    labelAttributes: PropTypes.shape(Text.propTypes),
+    style: TextInput.propTypes.style
   };
 
   static defaultProps = {
+    animatedAttributes: {},
+    animatedStyle: {},
     containerAttributes: {},
     containerStyle: {},
-    label: undefined
+    error: undefined,
+    errorAttributes: {},
+    errorStyle: {},
+    icon: undefined,
+    iconAttributes: {},
+    iconContainerStyle: {},
+    label: undefined,
+    labelAttributes: {},
+    style: {}
   };
 
   shakeAnimationValue = new Animated.Value(0);

@@ -21,6 +21,7 @@ export default class Avatar extends React.PureComponent {
     badge: PropTypes.bool,
     badgeAttributes: PropTypes.shape(Badge.propTypes),
     badgeIconAttributes: PropTypes.shape(Icon.propTypes),
+    containerStyle: ViewPropTypes.style,
     iconAttributes: PropTypes.shape(Icon.propTypes),
     imageAttributes: PropTypes.shape(Image.propTypes),
     placeholder: PropTypes.element,
@@ -36,6 +37,7 @@ export default class Avatar extends React.PureComponent {
     badge: false,
     badgeAttributes: {},
     badgeIconAttributes: {},
+    containerStyle: {},
     iconAttributes: {},
     imageAttributes: {},
     placeholder: undefined,
@@ -52,6 +54,7 @@ export default class Avatar extends React.PureComponent {
       badge,
       badgeAttributes,
       badgeIconAttributes,
+      containerStyle,
       iconAttributes,
       imageAttributes,
       placeholder: placeholderContent,
@@ -89,14 +92,15 @@ export default class Avatar extends React.PureComponent {
           styles.container,
           { width: size.value, height: size.value },
           rounded && { borderRadius: size.value / 2 },
-          style
+          containerStyle
         ])}
         {...attributes}
       >
         <Image
           style={StyleSheet.flatten([
             styles.avatar,
-            rounded && { borderRadius: size.value / 2, overflow: 'hidden' }
+            rounded && { borderRadius: size.value / 2, overflow: 'hidden' },
+            style
           ])}
           placeholder={placeholder}
           {...imageAttributes}

@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import Navigator from './src/navigation';
 import { persistor, store } from './src/store';
-import colors from './src/components/colors';
+import colors from './src/configs/colors';
 
 export default function App() {
   return (
