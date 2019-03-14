@@ -23,7 +23,7 @@ export default class Button extends React.PureComponent {
     leftComponent: PropTypes.element,
     light: PropTypes.bool,
     loading: PropTypes.bool,
-    loadingProps: PropTypes.shape(ActivityIndicator.propTypes),
+    loadingAttributes: PropTypes.shape(ActivityIndicator.propTypes),
     rightComponent: PropTypes.element,
     style: ViewPropTypes.style,
     title: PropTypes.string,
@@ -37,7 +37,7 @@ export default class Button extends React.PureComponent {
     leftComponent: null,
     light: false,
     loading: false,
-    loadingProps: {},
+    loadingAttributes: {},
     rightComponent: null,
     style: {},
     title: '',
@@ -52,7 +52,8 @@ export default class Button extends React.PureComponent {
       leftComponent,
       light,
       loading,
-      loadingProps,
+      loadingAttributes,
+      loadingStyles,
       rightComponent,
       style,
       title,
@@ -75,26 +76,27 @@ export default class Button extends React.PureComponent {
             disabled && disabledStyle
           ])}
         >
-          <Choose>
-            <When condition={loading}>
-              <ActivityIndicator animating {...loadingProps} />
-            </When>
-            <Otherwise>
-              {leftComponent}
-              <Text
-                color="light"
-                style={StyleSheet.flatten([
-                  styles.title,
-                  titleStyle,
-                  disabled && styles.disabledTitle,
-                  disabled && disabledTitleStyle
-                ])}
-              >
-                {title}
-              </Text>
-              {rightComponent}
-            </Otherwise>
-          </Choose>
+          <If condition={loading}>
+            <ActivityIndicator
+              style={StyleSheet.flatten([styles.loading, loadingStyles])}
+              animating
+              color="white"
+              {...loadingAttributes}
+            />
+          </If>
+          {leftComponent}
+          <Text
+            color="shine"
+            style={StyleSheet.flatten([
+              styles.title,
+              titleStyle,
+              disabled && styles.disabledTitle,
+              disabled && disabledTitleStyle
+            ])}
+          >
+            {title}
+          </Text>
+          {rightComponent}
         </View>
       </Touchable>
     );

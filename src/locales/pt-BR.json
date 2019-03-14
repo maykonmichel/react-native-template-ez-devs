@@ -1,0 +1,19 @@
+{
+  "mixed": {
+    "default": "{{path}} inválido",
+    "required": "{{path}} é obrigatório.",
+    "oneOf": "{{path}} deve ter um dos seguintes valores: {{values}}",
+    "notOneOf": "{{path}} não deve ter um dos seguintes valores: {{values}}"
+  },
+  "string": {
+    "length": "{{path}} deve ter exatamente {{length}} caracteres",
+    "min": "{{path}} deve ter pelo menos {{min}} caracteres",
+    "max": "{{path}} deve ter no máximo {{max} caracteres",
+    "matches": "{{path}} deve seguir o padrão: \"{{regex}}\"",
+    "email": "{{path}} deve ser um e-mail válido",
+    "url": "{{path}} deve ser uma URL válida",
+    "trim": "{{path}} não deve conter espaços",
+    "lowercase": "{{path}} deve conter apenas letras minúsculas",
+    "uppercase": "{{path}} deve conter apenas letras maiúsculas"
+  }
+}

@@ -7,6 +7,8 @@ import Navigator from './src/navigation';
 import { persistor, store } from './src/store';
 import colors from './src/configs/colors';
 
+import './src/configs';
+
 export default function App() {
   return (
     <View style={{ flex: 1 }}>

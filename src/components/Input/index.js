@@ -22,6 +22,7 @@ export default class Input extends React.PureComponent {
     iconContainerStyle: ViewPropTypes.style,
     label: PropTypes.string,
     labelAttributes: PropTypes.shape(Text.propTypes),
+    labelStyle: Text.propTypes.style,
     style: TextInput.propTypes.style
   };
 
@@ -38,6 +39,7 @@ export default class Input extends React.PureComponent {
     iconContainerStyle: {},
     label: undefined,
     labelAttributes: {},
+    labelStyle: {},
     style: {}
   };
 
@@ -47,16 +49,26 @@ export default class Input extends React.PureComponent {
     this.input.setNativeProps(nativeProps);
   }
 
+  onChangeText = value => {
+    const { onChange, name } = this.props;
+    onChange(name, value);
+  };
+
+  onBlur = () => {
+    const { onTouch, name } = this.props;
+    onTouch(name);
+  };
+
+  blur() {
+    this.input.blur();
+  }
+
   clear() {
     this.input.clear();
   }
 
   isFocused() {
     return this.input.isFocused();
-  }
-
-  blur() {
-    this.input.blur();
   }
 
   focus() {
@@ -88,6 +100,7 @@ export default class Input extends React.PureComponent {
       iconContainerStyle,
       label,
       labelAttributes,
+      labelStyle,
       style,
       ...attributes
     } = this.props;
@@ -100,7 +113,13 @@ export default class Input extends React.PureComponent {
     return (
       <View style={StyleSheet.flatten([styles.container, containerStyle])} {...containerAttributes}>
         <If condition={!!label}>
-          <Text {...labelAttributes}>{label}</Text>
+          <Text
+            typography="body"
+            style={StyleSheet.flatten([styles.label, labelStyle])}
+            {...labelAttributes}
+          >
+            {label}
+          </Text>
         </If>
         <Animated.View
           style={StyleSheet.flatten([
@@ -123,6 +142,8 @@ export default class Input extends React.PureComponent {
               this.input = ref;
             }}
             style={StyleSheet.flatten([styles.input, typographies.headline, style])}
+            onChangeText={this.onChangeText}
+            onBlur={this.onBlur}
             {...attributes}
           />
         </Animated.View>

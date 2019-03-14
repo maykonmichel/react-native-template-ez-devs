@@ -5,7 +5,8 @@ import colors from '../../configs/colors';
 export default StyleSheet.create({
   container: {
     width: '100%',
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    marginVertical: 5
   },
   animated: {
     flexDirection: 'row',
@@ -19,6 +20,7 @@ export default StyleSheet.create({
     marginHorizontal: 10
   },
   input: {
+    padding: 5,
     alignSelf: 'center',
     color: 'black',
     flex: 1
