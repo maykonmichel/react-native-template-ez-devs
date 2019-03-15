@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-ez-devs",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "homepage": "https://github.com/maykonmichel/react-native-template-ez-devs",
   "keywords": [
     "react-native",
@@ -10,35 +10,35 @@
   "license": "MIT",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "lint": "eslint *.js **/*.js"
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "formik": "^1.5.1",
-    "i18next": "^15.0.6",
+    "i18next": "^15.0.7",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "prop-types": "^15.6.2",
-    "react": "16.6.3",
-    "react-native": "0.59.0",
+    "prop-types": "^15.7.2",
+    "react": "16.8.3",
+    "react-native": "0.59.1",
     "react-native-gesture-handler": "^1.1.0",
     "react-native-vector-icons": "^6.4.1",
-    "react-navigation": "^3.3.2",
+    "react-navigation": "^3.4.0",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
     "redux-persist": "^5.10.0",
     "redux-saga": "^1.0.2",
     "reselect": "^4.0.0",
-    "yup": "^0.26.10"
+    "yup": "^0.27.0"
   },
   "devDependencies": {
-    "babel-core": "7.0.0-bridge.0",
+    "@babel/core": "7.3.4",
+    "@babel/runtime": "7.3.4",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "24.1.0",
+    "babel-jest": "24.5.0",
     "babel-plugin-jsx-control-statements": "^4.0.0",
-    "eslint": "^5.15.1",
+    "eslint": "^5.15.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-import": "^2.16.0",
@@ -46,18 +46,14 @@
     "eslint-plugin-jsx-control-statements": "^2.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "jest": "24.1.0",
+    "jest": "24.5.0",
     "jsx-control-statements": "^3.2.8",
-    "metro-react-native-babel-preset": "0.51.1",
+    "metro-react-native-babel-preset": "0.53.1",
     "prettier": "^1.16.4",
-    "react-test-renderer": "16.6.3",
+    "react-test-renderer": "16.8.3",
     "redux-devtools-extension": "^2.13.8"
   },
   "jest": {
     "preset": "react-native"
-  },
-  "bugs": {
-    "url": "https://github.com/maykonmichel/react-native-template-ez-devs/issues",
-    "email": "maykonmichelpalma@gmail.com"
   }
 }
