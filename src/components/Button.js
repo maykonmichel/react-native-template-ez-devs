@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import { toUpper } from 'lodash';
 
 import colors from '../configs/colors';
-import Icon from './Icon';
 import Text from './Text';
 import TouchableView from './TouchableView';
 
-const Button = ({ disabled, icon, loading, style, title, titleAttributes, ...attributes }) => {
+const Button = ({ disabled, loading, style, title, ...attributes }) => {
   const normalizedTitle = useMemo(() => (Platform.OS === 'android' ? toUpper(title) : title), []);
 
   return (
@@ -21,13 +20,7 @@ const Button = ({ disabled, icon, loading, style, title, titleAttributes, ...att
       <If condition={loading}>
         <ActivityIndicator animating color="white" />
       </If>
-      <If condition={icon}>
-        <Icon name={icon} size={20} color={disabled ? colors.light : '#fff'} />
-      </If>
-      <Text
-        style={StyleSheet.flatten([styles.title, disabled && styles.disabledTitle])}
-        {...titleAttributes}
-      >
+      <Text style={StyleSheet.flatten([styles.title, disabled && styles.disabledTitle])}>
         {normalizedTitle}
       </Text>
     </TouchableView>
@@ -68,20 +61,16 @@ const styles = StyleSheet.create({
 
 Button.propTypes = {
   disabled: PropTypes.bool,
-  icon: PropTypes.string,
   loading: PropTypes.bool,
   style: ViewPropTypes.style,
-  title: PropTypes.string,
-  titleAttributes: PropTypes.shape(Text.propTypes)
+  title: PropTypes.string
 };
 
 Button.defaultProps = {
   disabled: false,
-  icon: undefined,
   loading: false,
   style: {},
-  title: '',
-  titleAttributes: {}
+  title: ''
 };
 
 export default React.memo(Button);
