@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Text component renders as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders as expected 2`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders body as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders callout as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders caption1 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders caption2 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders display1 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders display2 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders display3 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders display4 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders display5 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders footnote as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders headline as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders subhead as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders title1 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders title2 as expected 1`] = `ShallowWrapper {}`;
+
+exports[`Testing Text component renders title3 as expected 1`] = `ShallowWrapper {}`;
