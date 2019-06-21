@@ -2,8 +2,6 @@
 
 exports[`Testing Text component renders as expected 1`] = `ShallowWrapper {}`;
 
-exports[`Testing Text component renders as expected 2`] = `ShallowWrapper {}`;
-
 exports[`Testing Text component renders body as expected 1`] = `ShallowWrapper {}`;
 
 exports[`Testing Text component renders callout as expected 1`] = `ShallowWrapper {}`;

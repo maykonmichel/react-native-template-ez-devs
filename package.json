@@ -55,6 +55,7 @@
     "prettier": "^1.18.2",
     "react-dom": "^16.8.6",
     "react-test-renderer": "16.8.3",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "sinon": "^7.3.2"
   }
 }
