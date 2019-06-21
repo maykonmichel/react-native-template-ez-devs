@@ -1,3 +1,7 @@
 .idea
 node_modules/
 coverage/
+.gradle
+local.properties
+build/
+*.iml
