@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import TouchableView from '../TouchableView';
 
-describe('Testing Text component', () => {
+describe('Testing TouchableView component', () => {
   const touchableView = shallow(<TouchableView>Test</TouchableView>);
   it('renders as expected', () => {
     expect(touchableView).toMatchSnapshot();

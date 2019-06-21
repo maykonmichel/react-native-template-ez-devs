@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Button component renders as expected 1`] = `
+<Memo(TouchableView)
+  activeOpacity={0.8}
+  disabled={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#141E50",
+      "elevation": 10,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "marginBottom": 30,
+      "marginTop": 10,
+      "paddingHorizontal": 30,
+      "paddingVertical": 8,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.34,
+      "shadowRadius": 6.27,
+    }
+  }
+>
+  <Memo(Text)
+    style={
+      Object {
+        "color": "#fff",
+        "textAlign": "center",
+      }
+    }
+  />
+</Memo(TouchableView)>
+`;
+
+exports[`Testing Button component renders disabled 1`] = `
+<Memo(TouchableView)
+  activeOpacity={0.8}
+  disabled={true}
+  onPress={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#6c757d",
+      "elevation": 10,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "marginBottom": 30,
+      "marginTop": 10,
+      "paddingHorizontal": 30,
+      "paddingVertical": 8,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.34,
+      "shadowRadius": 6.27,
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="white"
+    hidesWhenStopped={true}
+    size="small"
+  />
+  <Memo(Text)
+    style={
+      Object {
+        "color": "#f1f8ff",
+        "textAlign": "center",
+      }
+    }
+  />
+</Memo(TouchableView)>
+`;
+
+exports[`Testing Button component renders with loading indicator 1`] = `
+<Memo(TouchableView)
+  activeOpacity={0.8}
+  disabled={false}
+  onPress={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#141E50",
+      "elevation": 10,
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "marginBottom": 30,
+      "marginTop": 10,
+      "paddingHorizontal": 30,
+      "paddingVertical": 8,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.34,
+      "shadowRadius": 6.27,
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="white"
+    hidesWhenStopped={true}
+    size="small"
+  />
+  <Memo(Text)
+    style={
+      Object {
+        "color": "#fff",
+        "textAlign": "center",
+      }
+    }
+  />
+</Memo(TouchableView)>
+`;

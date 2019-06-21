@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing Text component renders as expected 1`] = `ShallowWrapper {}`;
-
-exports[`Testing Text component renders as expected 2`] = `ShallowWrapper {}`;
+exports[`Testing TouchableView component renders as expected 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+>
+  <View
+    style={false}
+  >
+    Test
+  </View>
+</TouchableOpacity>
+`;
