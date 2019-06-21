@@ -1,6 +1,7 @@
 {
   "preset": "react-native",
   "collectCoverage": true,
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
   "moduleDirectories": [
     "node_modules",
     "src"
