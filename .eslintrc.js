@@ -1,25 +1,23 @@
 module.exports = {
-  'plugins': [
-    'prettier',
-    'jsx-control-statements'
-  ],
-  'extends': [
+  plugins: ['prettier', 'jsx-control-statements'],
+  extends: [
     'airbnb',
     'prettier',
-    'plugin:jsx-control-statements/recommended'
+    'plugin:jsx-control-statements/recommended',
+    '@react-native-community'
   ],
-  'parser': 'babel-eslint',
-  'env': {
-    'jest': true,
+  parser: 'babel-eslint',
+  env: {
+    jest: true,
     'jsx-control-statements/jsx-control-statements': true
   },
-  'rules': {
+  rules: {
     'no-use-before-define': 'off',
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
     'comma-dangle': 'off',
     'prettier/prettier': ['error'],
-    'react/jsx-no-undef': [2, { 'allowGlobals': true }],
+    'react/jsx-no-undef': [2, { allowGlobals: true }],
     'jsx-control-statements/jsx-choose-not-empty': 1,
     'jsx-control-statements/jsx-for-require-each': 1,
     'jsx-control-statements/jsx-for-require-of': 1,
@@ -30,7 +28,7 @@ module.exports = {
     'jsx-control-statements/jsx-jcs-no-undef': 1,
     'no-undef': 0
   },
-  'globals': {
-    'fetch': false
+  globals: {
+    fetch: false
   }
 };
