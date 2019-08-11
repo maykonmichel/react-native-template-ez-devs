@@ -25,4 +25,4 @@ Text.defaultProps = {
   typography: 'headline'
 };
 
-export default React.memo(Text);
+export default Text;

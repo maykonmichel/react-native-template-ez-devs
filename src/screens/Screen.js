@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { Text } from '../components';
+import { Text, Button, Fade } from '../components';
 import { actions, getDucks, getStatus } from '../store/duck';
 
 class Screen extends React.Component {
@@ -22,10 +22,11 @@ class Screen extends React.Component {
     // const {} = this.state;
 
     return (
-      <View>
+      <Fade>
         <Text>React Native Template by Ez Devs</Text>
         <Text>Author: Maykon Michel Palma</Text>
-      </View>
+        <Button title="Button" />
+      </Fade>
     );
   }
 }
