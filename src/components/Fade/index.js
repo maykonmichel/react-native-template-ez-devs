@@ -8,6 +8,7 @@ const Fade = ({ children, style, duration, fadeIn, fadeOut, ...attributes }) => 
   useEffect(() => {
     // Fade in if enabled
     if (fadeIn) {
+      console.log('Updating opacity');
       Animated.timing(opacity, {
         toValue: 1,
         duration,
@@ -28,12 +29,12 @@ const Fade = ({ children, style, duration, fadeIn, fadeOut, ...attributes }) => 
 
   return (
     <Animated.View
-      style={StyleSheet.flatten([
+      style={[
+        style,
         {
           opacity
-        },
-        style
-      ])}
+        }
+      ]}
       {...attributes}
     >
       {children}

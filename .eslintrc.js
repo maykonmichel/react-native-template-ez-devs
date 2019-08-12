@@ -26,7 +26,8 @@ module.exports = {
     'jsx-control-statements/jsx-use-if-tag': 1,
     'jsx-control-statements/jsx-when-require-condition': 1,
     'jsx-control-statements/jsx-jcs-no-undef': 1,
-    'no-undef': 0
+    'no-undef': 0,
+    'react-hooks/exhaustive-deps': 'off'
   },
   globals: {
     fetch: false
