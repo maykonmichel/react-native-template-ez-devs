@@ -5,3 +5,6 @@ coverage/
 local.properties
 build/
 *.iml
+*.keystore
+# CocoaPods
+/ios/Pods/

@@ -68,3 +68,4 @@ react-native run-ios
 ## :nerd_face: Authors
 
 * [**Maykon Michel Palma**](https://github.com/maykonmichel) - *Initial work*
+* [**Vinícius Stefanutto Carra**](https://github.com/vinicarra)
