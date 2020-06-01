@@ -1,3 +1,5 @@
+# [DEPRECATED]
+
 # :ghost: React Native Template by ez.devs
 
 React Native template to initialize new projects on ez.devs. \
